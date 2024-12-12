@@ -1,20 +1,9 @@
 <?php
-/**
- * Register patterns.
- */
-
 add_action( 'init', 'bpc_register_block_pattern_categories' );
 add_action( 'init', 'bpc_register_block_patterns' );
-
-/**
- * Register Patterns
- */
 function bpc_register_block_patterns() {
-	if ( function_exists( 'register_block_pattern' ) ) {
-
-		/**
-		 * Stats Pattern
-		 */
+	if ( function_exists( 'register_block_pattern' ) ) 
+	{
 		register_block_pattern(
 			'bpc/stats',
 			[
@@ -25,9 +14,6 @@ function bpc_register_block_patterns() {
 			]
 		);
 
-		/**
-		 * Heading Text Buttons Pattern
-		 */
 		register_block_pattern(
 			'bpc/heading-text-buttons',
 			[
@@ -40,11 +26,8 @@ function bpc_register_block_patterns() {
 	}
 }
 
-/**
- * Register block pattern categories
- */
-function bpc_register_block_pattern_categories() {
-
+function bpc_register_block_pattern_categories() 
+{
 	register_block_pattern_category(
 		'patterns collection',
 		[ 'label' =>__( 'Patterns Collection', 'block-patterns-collection' ) ]
