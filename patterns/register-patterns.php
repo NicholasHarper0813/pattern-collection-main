@@ -1,8 +1,10 @@
 <?php
 add_action( 'init', 'bpc_register_block_pattern_categories' );
 add_action( 'init', 'bpc_register_block_patterns' );
-function bpc_register_block_patterns() {
-	if ( function_exists( 'register_block_pattern' ) ) 
+
+function bpc_register_block_patterns()
+{
+	if(function_exists('register_block_pattern' )) 
 	{
 		register_block_pattern(
 			'bpc/stats',
